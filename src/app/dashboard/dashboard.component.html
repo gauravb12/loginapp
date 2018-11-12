@@ -1,11 +1,14 @@
-<div style="position: absolute; z-index: -1; font-size: 30vh; color: #f7f7f7; text-align: center;">DASHBOARD</div>
-<div *ngIf="loggedData" style="z-index: 1000; font-size: 10vh; text-align: center; color: grey; margin-top: 10vh;">Welcome, {{ loggedData.firstName | uppercase }}</div>
+<div style="position: absolute; z-index: -1; font-size: 30vh; color: #f7f7f7; text-align: center; width: 100%;">DASHBOARD</div>
 
-<div *ngIf="loggedData" style="text-align: center; font-size: 5vh; margin-top: 10vh;">
+<div class="row">
+
+<div *ngIf="loggedData" class="col-sm-6 col-sm-offset-3 col-xs-10 col-xs-offset-1" style="z-index: 1000; font-size: 10vh; text-align: center; color: grey; margin-top: 10vh;">Welcome, {{ loggedData.firstName | uppercase }}</div>
+
+<div *ngIf="loggedData" style="text-align: center; font-size: 5vh; margin-top: 10vh;" class="col-sm-6 col-sm-offset-3 col-xs-10 col-xs-offset-1">
 	<b>First Name:</b> {{ loggedData.firstName }} <br>
 	<b>Last Name:</b> {{ loggedData.lastName }} <br>
 	<b>Email:</b> {{ loggedData.email }} <br><br>
 	<button mat-raised-button color="warn" (click)="logout()"><b>LOGOUT</b></button>
-	</div>
-
+</div>
+</div>
 	

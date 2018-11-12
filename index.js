@@ -96,6 +96,6 @@ app.get('/*', function(req, res) {
 	res.sendFile(path.join(__dirname+'/dist/logs/index.html'));
 });
 
-app.listen(process.env.PORT || 4200, function(req, res) { 
-	console.log('Listening at PORT 4200');
+app.listen(process.env.PORT || 8080, function(req, res) { 
+	console.log('Listening at PORT 8080');
 });

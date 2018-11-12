@@ -1,3 +1,3 @@
 module.exports = {
-	url: 'mongodb://127.0.0.1:27017/login'
+	url: 'mongodb://gaurav:zKFNsQUsxUY3c5B@ds063859.mlab.com:63859/loginapp'
 }
