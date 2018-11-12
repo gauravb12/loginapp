@@ -1,0 +1,22 @@
+<div class="form-box">
+  <form [formGroup]="loginForm" class="login-form">
+    <h2 style="text-align: left;">Login Here</h2>
+    <br>
+    <div *ngIf="errMsg" style="color: red; text-align: left;">{{errMsg}}</div>
+    <br>
+    <mat-form-field>
+      <input matInput placeholder="Email" type="email" formControlName="email">
+    </mat-form-field>
+    <br>
+    <mat-form-field>
+      <input matInput placeholder="Password" type="password" formControlName="password">
+    </mat-form-field>
+    <br>  
+    <div class="bottom-buttons">
+      <button mat-stroked-button color="primary" type="reset"><b>Reset</b></button> &nbsp; &nbsp;
+      <button mat-raised-button color="primary" (click)="loginUser()" type="submit"><b>Login</b></button>
+    </div>
+    <span style="text-align: left;"><app-signup></app-signup></span>
+  </form>
+
+</div>
