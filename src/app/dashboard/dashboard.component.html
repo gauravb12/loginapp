@@ -1,4 +1,4 @@
-<div style="position: absolute; z-index: -1; font-size: 30vh; color: #f7f7f7; text-align: center; width: 100%;">DASHBOARD</div>
+<div style="position: absolute; z-index: -1; font-size: 28vh; color: #f7f7f7; text-align: center; width: 100%;">DASHBOARD</div>
 
 <div class="row">
 
@@ -11,4 +11,58 @@
 	<button mat-raised-button color="warn" (click)="logout()"><b>LOGOUT</b></button>
 </div>
 </div>
+
+<h1 style="text-align: center;">Drag players to create teams.</h1>
 	
+
+<div class="players-box">
+	<h2>Players</h2>
+	<div 
+		class="drag-list"
+		cdkDropList
+		#playerList="cdkDropList"
+		[cdkDropListData]="players"
+		[cdkDropListConnectedTo]="[team1List, team2List, team3List]"
+		(cdkDropListDropped)="drop($event)">
+		<div class="drop-list-item" *ngFor="let item of players" cdkDrag>{{item}}</div>
+	</div>
+</div>
+
+<div class="team-box">
+	<h3>Team 1</h3>
+	<div 
+		class="drag-list"
+		cdkDropList
+		#team1List="cdkDropList"
+		[cdkDropListData]="team1"
+		[cdkDropListConnectedTo]="[playerList]"
+		(cdkDropListDropped)="drop($event)">
+		<div class="drop-list-item" *ngFor="let item of team1" cdkDrag>{{item}}</div>
+	</div>
+</div>
+
+<div class="team-box">
+	<h3>Team 2</h3>
+	<div 
+		class="drag-list"
+		cdkDropList
+		#team2List="cdkDropList"
+		[cdkDropListData]="team2"
+		[cdkDropListConnectedTo]="[playerList]"
+		(cdkDropListDropped)="drop($event)">
+		<div class="drop-list-item" *ngFor="let item of team2" cdkDrag>{{item}}</div>
+	</div>
+</div>
+
+<div class="team-box">
+	<h3>Team 3</h3>
+	<div 
+		class="drag-list"
+		cdkDropList
+		#team3List="cdkDropList"
+		[cdkDropListData]="team3"
+		[cdkDropListConnectedTo]="[playerList]"
+		(cdkDropListDropped)="drop($event)">
+		<div class="drop-list-item" *ngFor="let item of team3" cdkDrag>{{item}}</div>
+	</div>
+</div>

@@ -46,6 +46,8 @@ import {
 	MatTreeModule
 } from '@angular/material';
 
+import { DragDropModule } from '@angular/cdk/drag-drop';
+
 import { AppComponent } from './app.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { SignupComponent, SignupDialog } from './signup/signup.component';
@@ -70,6 +72,7 @@ const routes: Routes = [
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
+    DragDropModule,
     FormsModule,
     ReactiveFormsModule,
     MatAutocompleteModule,
